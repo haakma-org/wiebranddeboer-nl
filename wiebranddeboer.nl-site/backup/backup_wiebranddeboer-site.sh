@@ -4,7 +4,7 @@ BASE_PATH=`pwd`
 
 source ${BASE_PATH}/utils/read_configuration.sh
 
-read_config "/home/config/wiebranddeboer.properties"
+read_config "/home/config/wiebranddeboer_site.properties"
 
 DATE=`date +%Y-%m-%d`
 BASE_DIR=/home/backup/wiebranddboer.nl/today
