@@ -7,7 +7,7 @@ source ${BASE_PATH}/utils/read_configuration.sh
 read_config "/home/config/wiebranddeboer_site.properties"
 
 DATE=`date +%Y-%m-%d`
-BASE_DIR=/home/backup/wiebranddboer.nl/today
+BASE_DIR=/home/backup/wiebranddeboer.nl/today
 WWW_DIR=/home/sites
 
 echo "[INFO] Backup MySQL schema : ${SQL_SCHEMA}"
