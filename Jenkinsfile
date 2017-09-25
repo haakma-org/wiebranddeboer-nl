@@ -14,7 +14,7 @@ pipeline {
         checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: 'master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'jenkins-git', url: 'http://jenkins@github.com/haakma-org/wiebranddeboer-nl.git']]]
       }
     }
-    stage('Backup grotevriendelijkedames.nl') {
+    stage('Backup wiebranddeboer.nl') {
       steps {
         echo "Backup wiebranddeboer.nl"
         sh "./wiebranddeboer.nl-site/backup/backup_wiebranddeboer-site.sh"
