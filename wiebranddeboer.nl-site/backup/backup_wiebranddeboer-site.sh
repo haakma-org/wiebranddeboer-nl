@@ -12,6 +12,10 @@ WWW_DIR=/home/sites
 
 echo "[INFO] Backup MySQL schema : ${SQL_SCHEMA}"
 mysqldump -u ${SQL_USER} -p${SQL_PASSWORD} ${SQL_SCHEMA} --host=${SQL_HOST} --port=${SQL_PORT} > ${BASE_DIR}/${DATE}_wiebranddeboer.sql
+if [[ ${?} != 0 ]]; then
+  echo "[ERROR] mysqldump failed"
+  exit 1
+fi
 
 echo "[INFO] Backup directory : ${WWW_DIR}/www.wiebranddeboer.nl/"
 tar -cvf ${BASE_DIR}/${DATE}_wiebranddeboer.tar ${WWW_DIR}/www.wiebranddeboer.nl/
