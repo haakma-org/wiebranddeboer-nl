@@ -38,11 +38,11 @@ pipeline {
 }
 
 def notifyStarted() {
-  slackSend (channel: '#wiebranddeboer', color: '#FFFF00', message: "STARTED: Job - <${env.BUILD_URL}|${env.JOB_NAME}> | #${env.BUILD_NUMBER}")
+  slackSend (channel: '#wiebranddeboer-nl', color: '#FFFF00', message: "STARTED: Job - <${env.BUILD_URL}|${env.JOB_NAME}> | #${env.BUILD_NUMBER}")
 }
 def notifySuccess() {
-  slackSend (channel: '#wiebranddeboer', color: '#00FF00', message: "SUCCESSFUL: Job - <${env.BUILD_URL}|${env.JOB_NAME}> | #${env.BUILD_NUMBER}")
+  slackSend (channel: '#wiebranddeboer-nl', color: '#00FF00', message: "SUCCESSFUL: Job - <${env.BUILD_URL}|${env.JOB_NAME}> | #${env.BUILD_NUMBER}")
 }
 def notifyFailed() {
-  slackSend (channel: '#wiebranddeboer', color: '#FF0000', message: "FAILED: Job - <${env.BUILD_URL}|${env.JOB_NAME}> | #${env.BUILD_NUMBER}")
+  slackSend (channel: '#wiebranddeboer-nl', color: '#FF0000', message: "FAILED: Job - <${env.BUILD_URL}|${env.JOB_NAME}> | #${env.BUILD_NUMBER}")
 }
